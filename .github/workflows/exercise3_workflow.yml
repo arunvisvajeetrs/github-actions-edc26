@@ -9,6 +9,8 @@ on:
   workflow_dispatch:
 
 # Group of jobs to run as part of the workflow
+env:
+  MY_VAR: "exercise 3 env"
 jobs:
   greet:
     runs-on: ubuntu-latest
@@ -16,7 +18,7 @@ jobs:
       - run: |
           echo GITHUB_TOKEN is ${{secrets.GITHUB_TOKEN}}
           echo MY_VAR is "${{vars.MY_VAR}}"
-          echo "${{ CONTEXT.MY_VAR }}"
+          echo "${{ env.MY_VAR }}"
       
 
 
