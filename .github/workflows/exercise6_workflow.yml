@@ -1,0 +1,26 @@
+name: Workflow of exercise 6
+run-name: Sixth workflow - artifacts # Optional
+
+# Events triggering the workflow
+on: 
+  push:
+    branches: 
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  artifact-metadata: read
+  packages: read
+
+jobs:
+  artifact-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        
+      - name: create pdf
+        run: |
+          pandoc --template eisvogel exercises.md -o exercises.pdf
+
+
