@@ -12,13 +12,19 @@ on:
 env:
   MY_VAR: "exercise 3 env"
 jobs:
-  greet:
+  vars_test:
     runs-on: ubuntu-latest
     steps:
       - run: |
           echo GITHUB_TOKEN is ${{secrets.GITHUB_TOKEN}}
           echo MY_VAR is "${{vars.MY_VAR}}"
           echo "${{ env.MY_VAR }}"
-      
+      - name: condition based on secret
+        env: 
+          MY_SECRET: ${{secrets.MY_SECRET}}
+        if: ${{env.MY_SECRET == 'apple'}}
+        run: |
+          echo "Read the secret and matched"
+
 
 
