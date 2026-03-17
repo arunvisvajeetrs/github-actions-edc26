@@ -3,9 +3,6 @@ run-name: Third workflow - vars # Optional
 
 # Events triggering the workflow
 on: 
-  push:
-    branches: 
-      - main
   workflow_dispatch:
 
 # Group of jobs to run as part of the workflow
