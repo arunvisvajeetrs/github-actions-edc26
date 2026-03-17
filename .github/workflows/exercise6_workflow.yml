@@ -16,6 +16,7 @@ permissions:
 jobs:
   artifact-pdf:
     runs-on: ubuntu-latest
+    container: pandoc/extra
     steps:
       - uses: actions/checkout@v6
         
