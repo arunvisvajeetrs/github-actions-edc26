@@ -1,4 +1,4 @@
-name: Workflow of exercise 1
+name: Workflow of exercise 3
 run-name: Third workflow - vars # Optional
 
 # Events triggering the workflow
