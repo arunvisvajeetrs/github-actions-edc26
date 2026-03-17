@@ -8,6 +8,10 @@ on:
 # Group of jobs to run as part of the workflow
 env:
   MY_VAR: "exercise 3 env"
+permissions:
+  contents: read
+  artifact-metadata: read
+  packages: read
 jobs:
   vars_test:
     runs-on: ubuntu-latest
