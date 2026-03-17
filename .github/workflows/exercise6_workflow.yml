@@ -23,5 +23,10 @@ jobs:
       - name: create pdf
         run: |
           pandoc --template eisvogel exercises.md -o exercises.pdf
-
+      - name: "Upload Artifact"
+        uses: actions/upload-artifact@v7
+        with:
+          name: my-artifactss
+          path: exercises.pdf
+          retention-days: 5
 
