@@ -26,7 +26,7 @@ jobs:
   
   slow_job:
     runs-on: ubuntu-latest
-    timeout-minutes: 1
+    timeout-minutes: 2
     steps:
       - run: |
           echo "Hello, I'm slow_job"
